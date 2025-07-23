@@ -9,9 +9,6 @@ services:
       mountPath: /data/db
       sizeGB: 10
     envVars:
-      - key: MONGO_INITDB_ROOT_USERNAME
-        fromSecret: MONGO_INITDB_ROOT_USERNAME
-      - key: MONGO_INITDB_ROOT_PASSWORD
-        fromSecret: MONGO_INITDB_ROOT_PASSWORD
-      - key: MONGO_INITDB_DATABASE
-        fromSecret: MONGO_INITDB_DATABASE
+      - fromSecret: MONGO_INITDB_ROOT_USERNAME
+      - fromSecret: MONGO_INITDB_ROOT_PASSWORD
+      - fromSecret: MONGO_INITDB_DATABASE
